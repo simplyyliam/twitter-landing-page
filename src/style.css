@@ -230,8 +230,13 @@
         .post-avatar {
             width: 40px;
             height: 40px;
-            background: #333;
-            border-radius: 4px;
+            background-color: var(--surface-color);
+            background-image: url('/aether-logo.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 60%;
+            border-radius: 6px;
+            overflow: hidden;
         }
 
         .post-meta b { color: white; display: block; font-size: 0.9rem; }
