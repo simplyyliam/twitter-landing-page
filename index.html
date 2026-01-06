@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,182 @@
     <title>twitter-landing-page</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <nav id="mainNav">
+      <div class="container nav-inner">
+        <a href="#" class="logo-box">
+          <i data-lucide="hash"></i>
+          <span>Aetherial</span>
+        </a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#content">Content</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a href="https://x.com" target="_blank" class="btn btn-primary"
+          >Follow</a
+        >
+      </div>
+    </nav>
+
+    <header class="hero container" id="home">
+      <div class="avatar-wrap">
+        <img
+          src="https://api.dicebear.com/7.x/initials/svg?seed=AE&backgroundColor=3b82f6"
+          alt="Profile Avatar"
+        />
+      </div>
+      <h1>Aetherial Echoes</h1>
+      <p>
+        A curator of design theory, technical deep-dives, and human-centric
+        software philosophy. No noise, just the signal.
+      </p>
+      <div class="hero-actions">
+        <button
+          onclick="document.getElementById('contact').scrollIntoView()"
+          class="btn btn-outline"
+        >
+          Send a Message
+        </button>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <h2 class="section-title">Digital Stewardship.</h2>
+            <p class="section-desc">
+              This account serves as a structured archive of thoughts on where
+              the web is going. We don't chase trends; we analyze the
+              architecture behind them.
+            </p>
+            <p class="section-desc">
+              From low-level systems to high-level UI/UX, we explore how
+              software impacts our daily existence.
+            </p>
+          </div>
+          <div class="grid grid-2 grid-tight">
+            <div class="card">
+              <i data-lucide="book-open" class="card-icon"></i>
+              <h3>Daily Logs</h3>
+              <p>Quick-fire observations on industry shifts.</p>
+            </div>
+            <div class="card">
+              <i data-lucide="layers" class="card-icon"></i>
+              <h3>Deep Dives</h3>
+              <p>Bi-weekly threads on technical implementation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="content" class="section-content">
+      <div class="container">
+        <h2 class="centered-title">Recent Transmissions</h2>
+        <div class="grid grid-3">
+          <div class="card post-card">
+            <div class="post-header">
+              <div class="post-avatar"></div>
+              <div class="post-meta">
+                <b>Aetherial Echoes</b>
+                <span>@AetherEchoes · 4h</span>
+              </div>
+            </div>
+            <p class="post-body">
+              Hand-coding your CSS builds a mental model that frameworks often
+              obscure. Don't be afraid to go back to basics.
+            </p>
+          </div>
+
+          <div class="card post-card">
+            <div class="post-header">
+              <div class="post-avatar"></div>
+              <div class="post-meta">
+                <b>Aetherial Echoes</b>
+                <span>@AetherEchoes · 12h</span>
+              </div>
+            </div>
+            <p class="post-body">
+              Accessibility isn't a checklist you complete at the end. It's the
+              foundation of the structure you build from day one.
+            </p>
+          </div>
+
+          <div class="card post-card">
+            <div class="post-header">
+              <div class="post-avatar"></div>
+              <div class="post-meta">
+                <b>Aetherial Echoes</b>
+                <span>@AetherEchoes · 1d</span>
+              </div>
+            </div>
+            <p class="post-body">
+              Web design is moving away from the generic towards the authentic.
+              Expect more whitespace and brutalist honesty in 2026.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-wrap card">
+          <h2 class="form-title">Contact</h2>
+          <p class="form-desc">
+            Have a project or a question? Send a message directly to the
+            archive.
+          </p>
+          <form id="simpleForm">
+            <div class="form-group">
+              <label for="userName">Your Name</label>
+              <input
+                type="text"
+                id="userName"
+                placeholder="Jane Doe"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="userEmail">Email Address</label>
+              <input
+                type="email"
+                id="userEmail"
+                placeholder="jane@example.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="userMsg">Message</label>
+              <textarea
+                id="userMsg"
+                placeholder="Tell us more..."
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              Transmit Message
+            </button>
+          </form>
+          <div id="successMsg">Transmission received.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container">
+      <div class="footer-inner">
+        <div class="copyright">
+          &copy; 2026 Aetherial Echoes. Built with standard CSS.
+        </div>
+        <div class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">X / Twitter</a>
+          <a href="#">Source</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
